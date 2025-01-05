@@ -1,0 +1,128 @@
+/* ----- Style par défaut pour les écrans larges (desktop) ----- */
+/* Par défaut (écrans larges), cacher le bouton hamburger */
+#menu-toggle {
+    display: none; /* Cacher le bouton sur les écrans larges */
+}
+
+/* Afficher le bouton hamburger uniquement sur les petits écrans (768px ou moins) */
+@media (max-width: 768px) {
+
+    .header-right {
+        margin-right: 80px; /* Ajuste la marge à droite des boutons de connexion/déconnexion */
+    }
+    #menu-toggle {
+        display: block; /* Afficher le bouton ☰ sur les petits écrans */
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px; /* Taille des trois tirets */
+        color: white;
+        cursor: pointer;
+        z-index: 1000;
+    }
+}
+
+
+#content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* ----- Style pour les écrans moyens (tablettes) ----- */
+@media (max-width: 992px) {
+    #menu {
+        width: 200px; /* Réduire la largeur du menu */
+    }
+
+    #content {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* ----- Style pour les petits écrans (smartphones) ----- */
+@media (max-width: 768px) {
+    #menu {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%; /* Masquer le menu par défaut */
+        height: 100%;
+        transition: left 0.3s;
+    }
+
+    #menu.open {
+        left: 0; /* Afficher le menu lorsqu'il est ouvert */
+    }
+
+    #menu ul li::before {
+        content: "– "; /* Ajouter un tiret pour chaque élément du menu */
+        font-weight: bold;
+    }
+
+    #menu ul li a {
+        color: #333;
+    }
+
+    #menu ul li a:hover {
+        color: #007bff;
+    }
+
+   
+
+    
+
+    /* Rendre la table scrollable */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* ----- Style pour les écrans très petits (smartphones en mode portrait) ----- */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    #content {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+
+    table th, table td {
+        padding: 5px;
+    }
+}
