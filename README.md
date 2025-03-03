@@ -32,12 +32,5 @@ L'application permettra de **saisir les heures de coucher et de lever** et de ca
   - Évolution de l’état de forme au réveil.  
   - Autres indicateurs pertinents.  
 
-## 🎨 UI/UX  
-L'interface mettra l’accent sur **l’ergonomie** et **la facilité de lecture des données**.  
-Un **wireframe** peut être réalisé au préalable pour structurer l’application.  
-
-## 🚀 Installation  
-1. Cloner le dépôt :  
-   ```bash
-   git clone https://github.com/votre-utilisateur/nom-du-repo.git
-   cd nom-du-repo
+##  Auteur  
+DIEYE Ndoumbe
